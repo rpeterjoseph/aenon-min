@@ -30,7 +30,7 @@ export function middleware(request: NextRequest) {
     const response = NextResponse.next();
     // Set a cookie so you don't need ?preview= on every page
     response.cookies.set("preview_bypass", "true", {
-      maxAge: 60 * 60 * 24, // 24 hours
+      maxAge: 60 * 5, // 5 minutes
     });
     return response;
   }

@@ -67,7 +67,7 @@ export default function MaintenancePage() {
               fontWeight: 300,
             }}
           >
-            Serving South India · Est. 1989
+            Serving India · Est. 1989
           </span>
         </div>
         <div
@@ -170,9 +170,9 @@ export default function MaintenancePage() {
             marginBottom: "1.2rem",
           }}
         >
-          We&apos;re building
+         Our new website
           <br />
-          something <em style={{ color: "#D93A3C" }}>beautiful</em>
+          is <em style={{ color: "#D93A3C" }}>coming soon</em>
         </h1>
 
         {/* Description */}
@@ -187,9 +187,8 @@ export default function MaintenancePage() {
             marginBottom: "2.5rem",
           }}
         >
-          Our website is being refreshed with a new look to better share the
-          stories and work happening across rural South India. We&apos;ll be
-          back shortly.
+          Our website is currently being updated to better serve our community. 
+          We appreciate your patience while we complete this work.
         </p>
 
         {/* Divider */}
@@ -214,7 +213,7 @@ export default function MaintenancePage() {
         >
           Reach us at{" "}
           <a
-            href="mailto:info@aenonministries.org"
+            href="mailto:aenonchurch@gmail.com"
             style={{
               color: "rgba(255,255,255,0.6)",
               textDecoration: "none",
@@ -222,7 +221,7 @@ export default function MaintenancePage() {
               paddingBottom: 1,
             }}
           >
-            info@aenonministries.org
+            info.aenonministries.org
           </a>
         </p>
       </main>
@@ -246,7 +245,7 @@ export default function MaintenancePage() {
             color: "rgba(255,255,255,0.2)",
           }}
         >
-          &copy; 2024 Aenon Ministries and Trust. All rights reserved.
+          &copy; 2026 Aenon Ministries and Trust. All rights reserved.
         </p>
       </footer>
     </div>

@@ -50,11 +50,9 @@ export default function ContactPage() {
                   Office Address
                 </p>
                 <p className="font-mulish text-[0.9rem] font-light leading-relaxed text-navy">
-                  123 Service Lane, Nungambakkam
+                  Hyderabad
                   <br />
-                  Chennai, Tamil Nadu 600 034
-                  <br />
-                  India
+                  India, 500017
                 </p>
               </div>
             </div>
@@ -86,7 +84,7 @@ export default function ContactPage() {
                   Phone
                 </p>
                 <p className="font-mulish text-[0.9rem] font-light leading-relaxed text-navy">
-                  +91 44 0000 0000
+                  +91 40 0000 0000
                   <br />
                   <span className="text-muted text-[0.82rem]">
                     Mon&ndash;Sat, 9am&ndash;5pm IST

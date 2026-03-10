@@ -41,7 +41,7 @@ const programCards = [
       </>
     ),
     description:
-      "Scholarships, tuition centres, and adult literacy programs that open doors for children and adults across Tamil Nadu and Karnataka.",
+      "Scholarships, tuition centres, and adult literacy programs that open doors for children and adults across India.",
     slug: "education",
   },
   {
@@ -141,7 +141,7 @@ const involveCards = [
     icon: <DonateIcon className="w-8 h-8" />,
     title: "Donate",
     description:
-      "Your financial gift directly funds education, healthcare, and relief for families across South India. Every contribution makes a measurable difference.",
+      "Your financial gift directly funds education, healthcare, and relief for families across India. Every contribution makes a measurable difference.",
     buttonLabel: "Give Today",
     buttonClass:
       "inline-block font-mono-dm text-[0.65rem] tracking-[0.18em] uppercase px-9 py-3.5 bg-red text-white hover:bg-red-light hover:-translate-y-0.5 transition-all",
@@ -188,7 +188,7 @@ export default function Home() {
           <div className="flex flex-col justify-center px-6 py-16 md:px-16 lg:py-24 lg:pl-20 lg:pr-16">
             {/* Eyebrow */}
             <span className="font-mono-dm text-[0.6rem] tracking-[0.3em] uppercase text-red flex items-center gap-3 mb-8 animate-fade-up before:content-[''] before:w-[22px] before:h-[2px] before:bg-red">
-              South India &middot; Community Development
+              Hyderabad, India &middot; Community Development
             </span>
 
             {/* H1 */}
@@ -205,8 +205,8 @@ export default function Home() {
 
             {/* Description */}
             <p className="text-[0.98rem] font-light leading-[1.85] text-white/60 max-w-[52ch] mb-10 animate-fade-up-delay-2">
-              Aenon Ministries and Trust works alongside rural communities
-              across South India — providing education, healthcare, disaster
+              Aenon Ministries and Trust works alongside communities from
+              Hyderabad, India — providing education, healthcare, disaster
               relief, and holistic support to those who need it most.
             </p>
 
@@ -231,7 +231,7 @@ export default function Home() {
           <div className="relative hidden lg:block">
             <Image
               src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=900&q=80&fit=crop&crop=center"
-              alt="Community outreach in South India"
+              alt="Community outreach in Hyderabad, India"
               fill
               className="object-cover animate-fade-in"
               priority
@@ -366,8 +366,8 @@ export default function Home() {
             Founded in 1989, Aenon Ministries and Trust began with a simple
             conviction: that every community, no matter how remote, deserves
             access to education, healthcare, and the opportunity to thrive. What
-            started as a small outreach in rural Tamil Nadu has grown into a
-            multi-state effort touching thousands of lives each year.
+            started as a small outreach in Hyderabad has grown into an effort
+            touching thousands of lives each year.
           </p>
           <p className="text-[0.95rem] font-light leading-[1.85] text-white/55 max-w-[52ch] mb-10">
             For more than three decades, we have walked alongside the

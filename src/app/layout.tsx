@@ -26,7 +26,7 @@ const mulish = Mulish({
 export const metadata: Metadata = {
   title: "Aenon Ministries and Trust",
   description:
-    "Serving rural communities with compassion and dignity across South India since 1989.",
+    "Serving communities with compassion and dignity from Hyderabad, India since 1989.",
 };
 
 export default function RootLayout({

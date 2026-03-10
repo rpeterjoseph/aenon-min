@@ -26,7 +26,7 @@ export function Nav() {
             Aenon Ministries and Trust
           </span>
           <span className="font-mono-dm text-[0.6rem] uppercase tracking-[0.12em] text-white/35 leading-tight">
-            Serving South India &middot; Est. 1989
+            Hyderabad, India &middot; Est. 1989
           </span>
         </Link>
 

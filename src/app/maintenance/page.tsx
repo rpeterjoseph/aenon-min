@@ -67,7 +67,7 @@ export default function MaintenancePage() {
               fontWeight: 300,
             }}
           >
-            Serving India · Est. 1989
+            Hyderabad, India · Est. 1989
           </span>
         </div>
         <div

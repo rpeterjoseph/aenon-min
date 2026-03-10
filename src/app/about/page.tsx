@@ -50,7 +50,7 @@ export default function AboutPage() {
           </h1>
           <p className="font-mulish text-[1rem] font-light leading-relaxed text-white/50 max-w-xl">
             Aenon Ministries and Trust is a registered non-profit organisation
-            serving the most vulnerable communities across South India since
+            serving the most vulnerable communities from Hyderabad, India since
             1989. Through education, healthcare, and community development, we
             walk alongside those in need.
           </p>
@@ -70,11 +70,10 @@ export default function AboutPage() {
               From one village to <em>thousands</em>
             </h2>
             <p className="font-mulish text-[0.95rem] font-light leading-relaxed text-muted mb-6">
-              Aenon Ministries was founded in 1989 in a small village outside
-              Chennai, Tamil Nadu. What began as a single community health clinic
-              and a handful of volunteers quickly grew into a movement of
-              compassion, dignity, and service that now reaches thousands of
-              families across South India.
+              Aenon Ministries was founded in 1989 in Hyderabad, India. What
+              began as a single community health clinic and a handful of
+              volunteers quickly grew into a movement of compassion, dignity,
+              and service that now reaches thousands of families across India.
             </p>
             <p className="font-mulish text-[0.95rem] font-light leading-relaxed text-muted">
               Over three decades, we have expanded into education, women and
@@ -91,7 +90,7 @@ export default function AboutPage() {
               Our Mission
             </p>
             <p className="font-garamond text-[1.2rem] italic text-white leading-relaxed mb-8">
-              To serve the vulnerable and marginalised of South India with
+              To serve the vulnerable and marginalised of India with
               holistic care &mdash; addressing physical, social, and spiritual
               needs together.
             </p>

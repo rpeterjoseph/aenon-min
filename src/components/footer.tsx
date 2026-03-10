@@ -30,11 +30,11 @@ export function Footer() {
               Aenon Ministries and Trust
             </h3>
             <p className="font-mono-dm text-[0.6rem] uppercase tracking-[0.12em] text-white/35 mt-1 mb-0">
-              Registered NGO &middot; South India
+              Registered NGO &middot; Hyderabad, India
             </p>
           </div>
           <p className="font-mulish text-[0.85rem] leading-relaxed text-white/50 max-w-[320px] m-0">
-            Serving rural communities with compassion and dignity across South
+            Serving communities with compassion and dignity from Hyderabad,
             India since 1989. Bringing hope through education, healthcare, and
             community development.
           </p>
@@ -83,9 +83,9 @@ export function Footer() {
           </h4>
           <div className="flex flex-col gap-2">
             <span className="font-mono-dm text-[0.7rem] text-white/50 leading-relaxed">
-              Chennai
+              Hyderabad
               <br />
-              Tamil Nadu
+              India, 500017
             </span>
             <a
               href="mailto:info@aenonministries.org"
@@ -94,10 +94,10 @@ export function Footer() {
               info@aenonministries.org
             </a>
             <a
-              href="tel:+914400000000"
+              href="tel:+914000000000"
               className="font-mono-dm text-[0.7rem] text-white/50 transition-colors duration-200 hover:text-white no-underline"
             >
-              +91 44 0000 0000
+              +91 40 0000 0000
             </a>
           </div>
         </div>

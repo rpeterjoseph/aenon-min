@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { EB_Garamond, DM_Mono, Mulish } from "next/font/google";
+import { EB_Garamond, Noto_Serif, DM_Mono, Mulish } from "next/font/google";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import "./globals.css";
@@ -8,6 +8,13 @@ const ebGaramond = EB_Garamond({
   variable: "--font-eb-garamond",
   subsets: ["latin"],
   weight: ["400", "600"],
+  style: ["normal", "italic"],
+});
+
+const notoSerif = Noto_Serif({
+  variable: "--font-noto-serif",
+  subsets: ["latin"],
+  weight: ["300", "400", "600", "700"],
   style: ["normal", "italic"],
 });
 
@@ -37,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ebGaramond.variable} ${dmMono.variable} ${mulish.variable} antialiased`}
+        className={`${ebGaramond.variable} ${notoSerif.variable} ${dmMono.variable} ${mulish.variable} antialiased`}
       >
         <Nav />
         <main>{children}</main>

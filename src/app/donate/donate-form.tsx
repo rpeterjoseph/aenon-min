@@ -83,7 +83,7 @@ export function DonateForm() {
           <input
             type="number"
             name="customAmount"
-            placeholder="Enter amount in \u20B9"
+            placeholder="Enter amount in ₹"
             value={customAmount}
             onChange={handleCustomChange}
             className={inputClass}

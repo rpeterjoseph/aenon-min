@@ -16,7 +16,8 @@
   --color-muted: #6B7A96;
   --color-border: #D4D9E3;
 
-  --font-garamond: var(--font-eb-garamond);
+  --font-garamond: var(--font-noto-serif);
+  --font-logo: var(--font-eb-garamond);
   --font-mono-dm: var(--font-dm-mono);
   --font-mulish: var(--font-mulish);
 }

@@ -22,7 +22,7 @@ export function Nav() {
       <div className="flex items-center justify-between h-full px-6 md:px-10 max-w-[1400px] mx-auto">
         {/* Brand */}
         <Link href="/" className="flex flex-col gap-0 no-underline">
-          <span className="font-garamond text-[1.3rem] font-bold text-white leading-tight">
+          <span className="font-logo text-[1.3rem] font-bold text-white leading-tight">
             Aenon Ministries and Trust
           </span>
           <span className="font-mono-dm text-[0.6rem] uppercase tracking-[0.12em] text-white/35 leading-tight">

@@ -198,13 +198,13 @@ export default function Home() {
             >
               Serving with
               <br />
-              <em>&nbsp;compassion,</em>
+              &nbsp;compassion,
               <br />
-              <strong>&nbsp;building</strong> hope.
+              &nbsp;building hope.
             </h1>
 
             {/* Description */}
-            <p className="text-[0.98rem] font-light leading-[1.85] text-white/60 max-w-[52ch] mb-10 animate-fade-up-delay-2">
+            <p className="text-[0.98rem] font-semibold leading-[1.85] text-white/60 max-w-[52ch] mb-10 animate-fade-up-delay-2">
               Aenon Ministries and Trust works alongside communities from
               Hyderabad, India — providing education, healthcare, disaster
               relief, and holistic support to those who need it most.
@@ -263,7 +263,36 @@ export default function Home() {
       </div>
 
       {/* ============================================================ */}
-      {/* 3. PROGRAMS SECTION - "What We Do"                           */}
+      {/* 3. IMPACT STATS                                              */}
+      {/* ============================================================ */}
+      <section className="bg-off border-b border-border">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-2 lg:grid-cols-4 divide-x divide-border">
+          {[
+            { number: "35+", label: "Years of Service" },
+            { number: "120+", label: "Communities Reached" },
+            { number: "10,000+", label: "Families Served" },
+            { number: "6", label: "Core Programs" },
+          ].map((stat) => (
+            <div
+              key={stat.label}
+              className="flex flex-col items-center justify-center py-10 px-6 text-center"
+            >
+              <span
+                className="font-garamond text-navy leading-none mb-2"
+                style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)" }}
+              >
+                {stat.number}
+              </span>
+              <span className="font-mono-dm text-[0.55rem] tracking-[0.2em] uppercase text-muted">
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* 4. PROGRAMS SECTION - "What We Do"                           */}
       {/* ============================================================ */}
       <section className="bg-white px-6 py-16 md:px-12 lg:px-20 lg:py-22">
         {/* Header */}
@@ -496,6 +525,43 @@ export default function Home() {
               </Link>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* 7. CLOSING DONATE CTA                                        */}
+      {/* ============================================================ */}
+      <section className="bg-navy-deep px-6 py-20 md:py-28 text-center relative overflow-hidden">
+        <div className="grid-pattern absolute inset-0 pointer-events-none" />
+        <div className="relative max-w-[700px] mx-auto">
+          <span className="font-mono-dm text-[0.6rem] tracking-[0.3em] uppercase text-red flex items-center justify-center gap-3 mb-6 before:content-[''] before:w-[22px] before:h-[2px] before:bg-red after:content-[''] after:w-[22px] after:h-[2px] after:bg-red">
+            Make a Difference
+          </span>
+          <h2
+            className="font-garamond font-normal text-white leading-tight mb-6"
+            style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
+          >
+            Every rupee brings <em>hope</em> closer.
+          </h2>
+          <p className="text-[0.98rem] font-light leading-[1.85] text-white/55 max-w-[48ch] mx-auto mb-10">
+            Your gift funds education, healthcare, and crisis relief for
+            families who need it most. Join thousands of supporters making
+            this work possible.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link
+              href="/donate"
+              className="inline-block font-mono-dm text-[0.65rem] tracking-[0.18em] uppercase px-10 py-4 bg-red text-white hover:bg-red-light hover:-translate-y-0.5 transition-all no-underline"
+            >
+              Donate Now
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-block font-mono-dm text-[0.65rem] tracking-[0.18em] uppercase px-10 py-4 bg-transparent text-white/80 border border-white/25 hover:border-white hover:text-white hover:-translate-y-0.5 transition-all no-underline"
+            >
+              Get in Touch
+            </Link>
+          </div>
         </div>
       </section>
     </div>

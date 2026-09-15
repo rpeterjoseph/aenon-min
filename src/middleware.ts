@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 // ── Set to false when you're ready to go live ──
-const MAINTENANCE_MODE = true;
+const MAINTENANCE_MODE = false;
 
 // Secret key to bypass maintenance and preview the real site
 // Visit: https://yoursite.com?preview=aenon2024

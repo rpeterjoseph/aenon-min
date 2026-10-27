@@ -16,7 +16,7 @@
   --color-muted: #6B7A96;
   --color-border: #D4D9E3;
 
-  --font-garamond: var(--font-eb-garamond);
+  --font-garamond: var(--font-fraunces);
   --font-mono-dm: var(--font-dm-mono);
   --font-mulish: var(--font-mulish);
 }
@@ -30,6 +30,21 @@ body {
   color: var(--color-navy);
   background-color: #ffffff;
   overflow-x: hidden;
+}
+
+/* Editorial display type: tighter tracking, lower optical weight for
+   the large serif headlines that carry the new look. */
+.font-garamond {
+  letter-spacing: -0.015em;
+}
+
+.font-garamond em,
+.font-garamond i {
+  font-weight: 400;
+}
+
+.font-mono-dm {
+  font-weight: 400;
 }
 
 /* Animations */

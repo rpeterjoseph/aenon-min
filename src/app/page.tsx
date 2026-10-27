@@ -337,20 +337,37 @@ export default function Home() {
       {/* 4. STORY STRIP                                               */}
       {/* ============================================================ */}
       <section className="grid grid-cols-1 lg:grid-cols-2">
-        {/* Left - decorative text */}
-        <div className="relative bg-navy-mid py-20 px-8 md:px-16 lg:px-20 overflow-hidden min-h-[300px] lg:min-h-[500px] flex items-center">
-          <span
-            className="font-garamond italic text-white/[0.06] leading-[0.95] select-none pointer-events-none"
-            style={{ fontSize: "clamp(5rem, 10vw, 10rem)" }}
-          >
-            Rooted
-            <br />
-            in Faith,
-            <br />
-            Serving All
-          </span>
+        {/* Left - overlapping photo collage */}
+        <div className="relative bg-off py-20 px-8 md:px-16 lg:px-20 overflow-hidden min-h-[340px] lg:min-h-[560px] flex items-center justify-center">
+          <div className="absolute inset-0 grid-pattern-subtle pointer-events-none opacity-60" />
+
+          <div className="relative w-full max-w-[420px] aspect-[4/5]">
+            <div className="absolute top-0 left-0 w-[62%] aspect-[4/5] border-4 border-white shadow-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80&fit=crop&crop=faces"
+                alt="Community outreach volunteer"
+                fill
+                className="object-cover"
+                sizes="300px"
+              />
+            </div>
+            <div className="absolute bottom-0 right-0 w-[58%] aspect-square border-4 border-white shadow-lg">
+              <Image
+                src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?w=500&q=80&fit=crop&crop=faces"
+                alt="Children at a village school"
+                fill
+                className="object-cover"
+                sizes="280px"
+              />
+            </div>
+            {/* Photo label */}
+            <span className="absolute -bottom-3 left-2 font-mono-dm text-[0.55rem] uppercase tracking-[0.1em] text-muted/70 bg-white px-3 py-1.5 rounded-sm">
+              Replace with your own photos
+            </span>
+          </div>
+
           {/* Badge */}
-          <span className="absolute bottom-6 left-6 md:left-16 lg:left-20 font-mono-dm text-[0.6rem] tracking-[0.2em] uppercase text-white bg-red px-5 py-2.5 rounded-sm">
+          <span className="absolute top-8 left-8 md:left-16 lg:left-20 font-mono-dm text-[0.6rem] tracking-[0.2em] uppercase text-white bg-red px-5 py-2.5 rounded-sm">
             Our Story Since 1989
           </span>
         </div>

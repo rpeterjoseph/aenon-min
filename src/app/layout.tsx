@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { EB_Garamond, DM_Mono, Mulish } from "next/font/google";
+import { Fraunces, DM_Mono, Mulish } from "next/font/google";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import "./globals.css";
 
-const ebGaramond = EB_Garamond({
-  variable: "--font-eb-garamond",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["400", "600"],
+  weight: ["300", "400", "500", "600"],
   style: ["normal", "italic"],
 });
 
@@ -26,7 +26,7 @@ const mulish = Mulish({
 export const metadata: Metadata = {
   title: "Aenon Ministries and Trust",
   description:
-    "Serving communities with compassion and dignity from Hyderabad, India since 1989.",
+    "A Christian organization showing the love of Jesus to the world — serving communities with compassion from Hyderabad, India since 1989.",
 };
 
 export default function RootLayout({
@@ -37,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${ebGaramond.variable} ${dmMono.variable} ${mulish.variable} antialiased`}
+        className={`${fraunces.variable} ${dmMono.variable} ${mulish.variable} antialiased`}
       >
         <Nav />
         <main>{children}</main>

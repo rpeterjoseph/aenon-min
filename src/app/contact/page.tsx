@@ -1,114 +1,82 @@
-import { PinIcon, MailIcon, PhoneIcon } from "@/components/icons";
+import { MailIcon, PhoneIcon, PinIcon } from "@/components/icons";
 import { ContactForm } from "./contact-form";
 
 export default function ContactPage() {
   return (
-    <>
-      {/* ───── Page Hero ───── */}
-      <section className="mt-[70px] bg-navy-deep py-24 px-6 md:px-20 relative overflow-hidden">
-        <div className="absolute inset-0 grid-pattern-subtle" />
+    <div>
+      <section className="mt-[70px] bg-navy-deep py-24 px-6 md:px-20 relative">
+        <div className="absolute inset-0 grid-pattern pointer-events-none" />
         <div className="relative max-w-[1400px] mx-auto">
-          <p className="font-mono-dm text-[0.6rem] tracking-[0.3em] uppercase text-red flex items-center gap-3 mb-6">
+          <p className="font-mono-dm text-[0.65rem] uppercase tracking-[0.15em] text-red flex items-center gap-3 mb-6">
             <span className="block w-8 h-[2px] bg-red" />
             Get In Touch
           </p>
-          <h1 className="font-garamond text-[clamp(2.4rem,5vw,4rem)] font-normal leading-tight text-white max-w-3xl mb-6">
-            We would love to <em>hear from you.</em>
+          <h1
+            className="font-garamond text-white leading-[1.1] mb-6"
+            style={{ fontSize: "clamp(2.8rem, 5vw, 5rem)" }}
+          >
+            We&rsquo;d love to <em>hear from you.</em>
           </h1>
-          <p className="font-mulish text-[1rem] font-light leading-relaxed text-white/50 max-w-xl">
-            Whether you have a question about our programmes, want to partner
-            with us, or simply want to learn more &mdash; we are here and happy
-            to connect.
+          <p className="text-white/55 text-[1.05rem] leading-relaxed max-w-[640px] font-light">
+            Whether you want to give, serve, partner, or simply learn more
+            about our work, reach out — we&rsquo;d be glad to talk.
           </p>
         </div>
       </section>
 
-      {/* ───── Contact Section ───── */}
-      <section className="py-22 px-6 md:px-20 bg-white">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
-          {/* Left: Form */}
-          <div>
-            <p className="font-mono-dm text-[0.6rem] tracking-[0.3em] uppercase text-red flex items-center gap-3 mb-6">
-              <span className="block w-8 h-[2px] bg-red" />
-              Send a Message
-            </p>
-            <h2 className="font-garamond text-[clamp(2.2rem,4vw,3.5rem)] font-normal leading-tight mb-10">
-              Let&apos;s <em>connect</em>
-            </h2>
-            <ContactForm />
-          </div>
-
-          {/* Right: Office info */}
-          <div className="flex flex-col gap-0">
-            {/* Address */}
-            <div className="flex gap-5 py-7 border-b border-border">
-              <div className="w-11 h-11 rounded-full bg-red-pale flex items-center justify-center shrink-0 mt-1">
-                <PinIcon className="w-[18px] h-[18px] text-red" />
-              </div>
+      <section className="bg-white px-6 py-20 md:px-20">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.4fr] gap-14">
+          <div className="flex flex-col gap-8">
+            <div className="flex items-start gap-4">
+              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-pale text-red shrink-0">
+                <PinIcon className="w-[18px] h-[18px]" />
+              </span>
               <div>
-                <p className="font-mono-dm text-[0.6rem] tracking-[0.18em] uppercase text-red mb-2">
-                  Office Address
-                </p>
-                <p className="font-mulish text-[0.9rem] font-light leading-relaxed text-navy">
-                  Hyderabad
-                  <br />
-                  India, 500017
+                <h4 className="font-mono-dm text-[0.65rem] uppercase tracking-[0.15em] text-navy mb-1">
+                  Address
+                </h4>
+                <p className="text-[0.9rem] font-light text-muted leading-relaxed m-0">
+                  Hyderabad, India, 500017
                 </p>
               </div>
             </div>
-
-            {/* Email */}
-            <div className="flex gap-5 py-7 border-b border-border">
-              <div className="w-11 h-11 rounded-full bg-red-pale flex items-center justify-center shrink-0 mt-1">
-                <MailIcon className="w-[18px] h-[18px] text-red" />
-              </div>
+            <div className="flex items-start gap-4">
+              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-pale text-red shrink-0">
+                <MailIcon className="w-[18px] h-[18px]" />
+              </span>
               <div>
-                <p className="font-mono-dm text-[0.6rem] tracking-[0.18em] uppercase text-red mb-2">
+                <h4 className="font-mono-dm text-[0.65rem] uppercase tracking-[0.15em] text-navy mb-1">
                   Email
-                </p>
-                <p className="font-mulish text-[0.9rem] font-light leading-relaxed text-navy">
+                </h4>
+                <a
+                  href="mailto:info@aenonministries.org"
+                  className="text-[0.9rem] font-light text-muted leading-relaxed no-underline hover:text-navy transition-colors"
+                >
                   info@aenonministries.org
-                  <br />
-                  donations@aenonministries.org
-                </p>
+                </a>
               </div>
             </div>
-
-            {/* Phone */}
-            <div className="flex gap-5 py-7 border-b border-border">
-              <div className="w-11 h-11 rounded-full bg-red-pale flex items-center justify-center shrink-0 mt-1">
-                <PhoneIcon className="w-[18px] h-[18px] text-red" />
-              </div>
+            <div className="flex items-start gap-4">
+              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-pale text-red shrink-0">
+                <PhoneIcon className="w-[18px] h-[18px]" />
+              </span>
               <div>
-                <p className="font-mono-dm text-[0.6rem] tracking-[0.18em] uppercase text-red mb-2">
+                <h4 className="font-mono-dm text-[0.65rem] uppercase tracking-[0.15em] text-navy mb-1">
                   Phone
-                </p>
-                <p className="font-mulish text-[0.9rem] font-light leading-relaxed text-navy">
+                </h4>
+                <a
+                  href="tel:+914000000000"
+                  className="text-[0.9rem] font-light text-muted leading-relaxed no-underline hover:text-navy transition-colors"
+                >
                   +91 40 0000 0000
-                  <br />
-                  <span className="text-muted text-[0.82rem]">
-                    Mon&ndash;Sat, 9am&ndash;5pm IST
-                  </span>
-                </p>
+                </a>
               </div>
-            </div>
-
-            {/* Registration details box */}
-            <div className="mt-8 bg-off border-l-[3px] border-red p-8">
-              <p className="font-mono-dm text-[0.6rem] tracking-[0.18em] uppercase text-red mb-3">
-                Registration Details
-              </p>
-              <p className="font-mulish text-[0.85rem] font-light leading-relaxed text-muted">
-                Registered under the Societies Registration Act
-                <br />
-                FCRA: 076050123
-                <br />
-                80G tax exemption available for Indian donors
-              </p>
             </div>
           </div>
+
+          <ContactForm />
         </div>
       </section>
-    </>
+    </div>
   );
 }

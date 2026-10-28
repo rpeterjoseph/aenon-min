@@ -32,7 +32,6 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-      {/* Name row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label className="font-mono-dm text-[0.58rem] tracking-[0.18em] uppercase text-navy block mb-1.5">
@@ -58,7 +57,6 @@ export function ContactForm() {
         </div>
       </div>
 
-      {/* Email */}
       <div>
         <label className="font-mono-dm text-[0.58rem] tracking-[0.18em] uppercase text-navy block mb-1.5">
           Email Address
@@ -71,7 +69,6 @@ export function ContactForm() {
         />
       </div>
 
-      {/* Interest */}
       <div>
         <label className="font-mono-dm text-[0.58rem] tracking-[0.18em] uppercase text-navy block mb-1.5">
           I am interested in
@@ -90,7 +87,6 @@ export function ContactForm() {
         </select>
       </div>
 
-      {/* Message */}
       <div>
         <label className="font-mono-dm text-[0.58rem] tracking-[0.18em] uppercase text-navy block mb-1.5">
           Message
@@ -103,7 +99,6 @@ export function ContactForm() {
         />
       </div>
 
-      {/* Submit */}
       <button
         type="submit"
         className="w-full bg-red text-white font-mono-dm text-[0.7rem] uppercase tracking-[0.15em] py-4 px-8 border-none cursor-pointer transition-colors duration-200 hover:bg-red-light"

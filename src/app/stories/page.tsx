@@ -1,154 +1,80 @@
-import Link from "next/link";
-import { stories } from "@/data/stories";
-import { IconByName } from "@/components/icons";
-import { PinIcon } from "@/components/icons";
+import { EduIcon, HomeIcon, HealthIcon } from "@/components/icons";
 
-export const metadata = {
-  title: "Stories | Aenon Ministries and Trust",
-  description:
-    "Real stories from the communities we serve — of resilience, courage, and the quiet, steady work of restoration.",
-};
+const stories = [
+  {
+    icon: <EduIcon className="w-10 h-10 text-muted" />,
+    category: "Education",
+    title: "First in Her Family to Complete Secondary School",
+    excerpt:
+      "Meena, 16, became the first in her family to finish Class 10 with support from our scholarship program.",
+  },
+  {
+    icon: <HomeIcon className="w-10 h-10 text-muted" />,
+    category: "Disaster Relief",
+    title: "200 Families Rebuild After the 2023 Floods",
+    excerpt:
+      "After the 2023 floods, our team delivered food, clean water, and reconstruction support within 48 hours.",
+  },
+  {
+    icon: <HealthIcon className="w-10 h-10 text-muted" />,
+    category: "Healthcare",
+    title: "Mobile Clinic Reaches a Village for the First Time",
+    excerpt:
+      "A village 40 km from the nearest town received its first medical camp, serving 180 patients in one day.",
+  },
+];
 
 export default function StoriesPage() {
-  const featured = stories[0];
-  const allStories = stories;
-
   return (
-    <div className="bg-white">
-      {/* ── Hero ── */}
-      <section className="mt-[70px] bg-navy-deep relative">
-        <div className="absolute inset-0 grid-pattern-subtle" />
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-16 md:py-20 lg:pt-24 lg:pb-[4.5rem]">
-          <span className="font-mono-dm text-[0.65rem] uppercase tracking-[0.15em] text-white/35 block mb-4">
-            From the Field
-          </span>
+    <div>
+      <section className="mt-[70px] bg-navy-deep py-24 px-6 md:px-20 relative">
+        <div className="absolute inset-0 grid-pattern pointer-events-none" />
+        <div className="relative max-w-[1400px] mx-auto">
+          <p className="font-mono-dm text-[0.65rem] uppercase tracking-[0.15em] text-red flex items-center gap-3 mb-6">
+            <span className="block w-8 h-[2px] bg-red" />
+            From The Field
+          </p>
           <h1
-            className="font-garamond text-white m-0 leading-[1.1]"
+            className="font-garamond text-white leading-[1.1] mb-6"
             style={{ fontSize: "clamp(2.8rem, 5vw, 5rem)" }}
           >
-            Stories of <em>transformation</em>
+            Stories of <em>transformation.</em>
           </h1>
-          <p className="text-white/60 text-[1.05rem] leading-relaxed mt-5 max-w-[620px] m-0 font-light">
-            Real stories from the communities we serve — of resilience, courage,
-            and the quiet, steady work of restoration.
+          <p className="text-white/55 text-[1.05rem] leading-relaxed max-w-[640px] font-light">
+            Every statistic is a person. These are a few of the lives
+            Christ&rsquo;s love has touched through the work of Aenon
+            Ministries.
           </p>
         </div>
       </section>
 
-      {/* ── Featured Story ── */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-12 md:py-16">
-        <Link
-          href={`/stories/${featured.slug}`}
-          className="no-underline block group"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 border border-border bg-white rounded-sm overflow-hidden transition-shadow duration-300 group-hover:shadow-lg">
-            {/* Left icon area */}
-            <div className="bg-navy-mid min-h-[250px] md:min-h-[300px] flex items-center justify-center">
-              <IconByName
-                name={featured.icon}
-                className="w-28 h-28 text-white/[0.18]"
-              />
-            </div>
-
-            {/* Right content */}
-            <div className="p-8 md:p-10 lg:p-12 flex flex-col justify-center">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="block w-5 h-[2px] bg-red" />
-                <span className="font-mono-dm text-[0.6rem] uppercase tracking-[0.15em] text-red">
-                  Featured Story
+      <section className="bg-off px-6 py-20 md:px-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1400px] mx-auto">
+          {stories.map((story) => (
+            <div
+              key={story.title}
+              className="bg-white rounded-sm overflow-hidden border border-border"
+            >
+              <div className="bg-light h-52 flex flex-col items-center justify-center gap-3">
+                {story.icon}
+                <span className="font-mono-dm text-[0.55rem] tracking-[0.15em] uppercase text-muted/60">
+                  Story image
                 </span>
               </div>
-              <h2 className="font-garamond text-[1.6rem] md:text-[2rem] text-navy leading-snug m-0">
-                {featured.title}
-              </h2>
-              <p className="text-muted text-[0.9rem] leading-relaxed mt-4 mb-6 font-light">
-                {featured.excerpt}
-              </p>
-              <span className="font-mono-dm text-[0.65rem] uppercase tracking-[0.1em] text-navy border-b border-navy pb-[2px] self-start transition-colors duration-200 group-hover:text-red group-hover:border-red">
-                Read Story &rarr;
-              </span>
+
+              <div className="p-7">
+                <span className="font-mono-dm text-[0.6rem] tracking-[0.2em] uppercase text-red mb-2 block">
+                  {story.category}
+                </span>
+                <h3 className="font-garamond text-[1.25rem] font-normal text-navy leading-tight mb-3">
+                  {story.title}
+                </h3>
+                <p className="text-[0.88rem] font-light leading-[1.75] text-muted">
+                  {story.excerpt}
+                </p>
+              </div>
             </div>
-          </div>
-        </Link>
-      </section>
-
-      {/* ── Stories Grid ── */}
-      <section className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 pb-16 md:pb-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {allStories.map((story) => (
-            <Link
-              key={story.slug}
-              href={`/stories/${story.slug}`}
-              className="no-underline block group"
-            >
-              <article className="bg-white border border-border rounded-sm overflow-hidden transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
-                {/* Icon area */}
-                <div className="h-[200px] bg-light flex items-center justify-center border-b-[3px] border-red">
-                  <IconByName
-                    name={story.icon}
-                    className="w-16 h-16 text-muted opacity-30"
-                  />
-                </div>
-
-                {/* Card body */}
-                <div className="p-6 lg:p-7">
-                  {/* Meta row */}
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="font-mono-dm text-[0.6rem] uppercase tracking-[0.08em] text-red bg-red-pale px-2 py-1 rounded-sm">
-                      {story.category}
-                    </span>
-                    <span className="flex items-center gap-1 text-muted">
-                      <PinIcon className="w-3 h-3" />
-                      <span className="font-mono-dm text-[0.55rem] uppercase tracking-[0.05em]">
-                        {story.location}
-                      </span>
-                    </span>
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="font-garamond text-[1.35rem] text-navy leading-snug m-0 mb-2">
-                    {story.title}
-                  </h3>
-
-                  {/* Excerpt */}
-                  <p className="text-[0.83rem] font-light text-muted leading-relaxed m-0 mb-5">
-                    {story.excerpt}
-                  </p>
-
-                  {/* Read link */}
-                  <span className="font-mono-dm text-[0.6rem] uppercase tracking-[0.1em] text-navy border-b border-navy pb-[2px] transition-colors duration-200 group-hover:text-red group-hover:border-red">
-                    Read Story &rarr;
-                  </span>
-                </div>
-              </article>
-            </Link>
           ))}
-        </div>
-      </section>
-
-      {/* ── Share Your Story ── */}
-      <section className="bg-off border-t border-border">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 py-16 md:py-20 text-center">
-          <span className="font-mono-dm text-[0.65rem] uppercase tracking-[0.15em] text-muted block mb-4">
-            Your Story Matters
-          </span>
-          <h2
-            className="font-garamond text-navy leading-[1.15] m-0"
-            style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.8rem)" }}
-          >
-            Have a story to share?
-          </h2>
-          <p className="text-muted text-[0.95rem] leading-relaxed mt-4 mb-8 max-w-[520px] mx-auto font-light">
-            If our programs have touched your life or the life of someone you
-            know, we would love to hear from you. Every story inspires others and
-            helps us grow.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block font-mono-dm text-[0.65rem] uppercase tracking-[0.1em] text-white bg-red px-8 py-3 rounded-sm transition-colors duration-200 hover:bg-red-light no-underline"
-          >
-            Contact Us to Share Your Story
-          </Link>
         </div>
       </section>
     </div>

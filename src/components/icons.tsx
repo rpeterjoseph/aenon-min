@@ -97,25 +97,6 @@ export function AlertIcon({ className = "w-6 h-6" }: IconProps) {
   );
 }
 
-export function HandsIcon({ className = "w-6 h-6" }: IconProps) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.8}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path d="M18 16.98h-5.99c-.26 0-.51-.04-.75-.12l-4.5-1.5" />
-      <path d="M2 17l5 5h7l8-8-1.5-1.5a2.12 2.12 0 0 0-3 0L15 14H9a1 1 0 0 0 0 2h3" />
-      <path d="M8 17V11.5a1.5 1.5 0 0 1 3 0v.5m0-1v-2a1.5 1.5 0 0 1 3 0v2.5m0-.5a1.5 1.5 0 0 1 3 0v3" />
-    </svg>
-  );
-}
-
 export function HomeIcon({ className = "w-6 h-6" }: IconProps) {
   return (
     <svg
@@ -200,23 +181,6 @@ export function PhoneIcon({ className = "w-6 h-6" }: IconProps) {
       className={className}
     >
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.08 6.08l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z" />
-    </svg>
-  );
-}
-
-export function CheckIcon({ className = "w-6 h-6" }: IconProps) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.8}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <polyline points="20 6 9 17 4 12" />
     </svg>
   );
 }
@@ -319,24 +283,96 @@ export function PartnerIcon({ className = "w-6 h-6" }: IconProps) {
   );
 }
 
+export function PlayIcon({ className = "w-6 h-6" }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+    >
+      <path d="M8 5.14v13.72c0 .78.84 1.27 1.52.89l12-6.86a1 1 0 0 0 0-1.78l-12-6.86A1.02 1.02 0 0 0 8 5.14z" />
+    </svg>
+  );
+}
+
+export function CrossIcon({ className = "w-6 h-6" }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <path d="M12 2v20M6 7h12" />
+    </svg>
+  );
+}
+
+export function FacebookIcon({ className = "w-5 h-5" }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+    >
+      <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z" />
+    </svg>
+  );
+}
+
+export function InstagramIcon({ className = "w-5 h-5" }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      className={className}
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <circle cx="12" cy="12" r="4" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+export function YoutubeIcon({ className = "w-5 h-5" }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+    >
+      <path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14C4.5 20.5 12 20.5 12 20.5s7.5 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.81zM9.6 15.6V8.4l6.4 3.6z" />
+    </svg>
+  );
+}
+
 const iconMap: Record<string, React.ComponentType<IconProps>> = {
   edu: EduIcon,
   health: HealthIcon,
   users: UsersIcon,
   globe: GlobeIcon,
   alert: AlertIcon,
-  hands: HandsIcon,
   home: HomeIcon,
   heart: HeartIcon,
   pin: PinIcon,
   mail: MailIcon,
   phone: PhoneIcon,
-  check: CheckIcon,
   sun: SunIcon,
   leaf: LeafIcon,
   donate: DonateIcon,
   volunteer: VolunteerIcon,
   partner: PartnerIcon,
+  cross: CrossIcon,
 };
 
 export function IconByName({

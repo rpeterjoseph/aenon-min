@@ -3,10 +3,10 @@
 import { useState } from "react";
 
 const amounts = [
-  { value: 500, label: "\u20B9500" },
-  { value: 1000, label: "\u20B91,000" },
-  { value: 2500, label: "\u20B92,500" },
-  { value: 5000, label: "\u20B95,000" },
+  { value: 500, label: "₹500" },
+  { value: 1000, label: "₹1,000" },
+  { value: 2500, label: "₹2,500" },
+  { value: 5000, label: "₹5,000" },
 ];
 
 const frequencyOptions = ["Monthly", "One-time", "Annual"];
@@ -54,7 +54,6 @@ export function DonateForm() {
       </h2>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-        {/* Amount grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {amounts.map((amt) => (
             <button
@@ -77,20 +76,18 @@ export function DonateForm() {
           ))}
         </div>
 
-        {/* Custom amount */}
         <div>
           <label className={labelClass}>Custom Amount</label>
           <input
             type="number"
             name="customAmount"
-            placeholder="Enter amount in \u20B9"
+            placeholder="Enter amount in ₹"
             value={customAmount}
             onChange={handleCustomChange}
             className={inputClass}
           />
         </div>
 
-        {/* Frequency */}
         <div>
           <label className={labelClass}>Frequency</label>
           <select name="frequency" className={inputClass}>
@@ -102,7 +99,6 @@ export function DonateForm() {
           </select>
         </div>
 
-        {/* Designation */}
         <div>
           <label className={labelClass}>Designate To</label>
           <select name="designation" className={inputClass}>
@@ -114,47 +110,28 @@ export function DonateForm() {
           </select>
         </div>
 
-        {/* Divider */}
         <div className="border-t border-border my-3" />
 
-        {/* Your Details */}
         <p className="font-mono-dm text-[0.6rem] tracking-[0.3em] uppercase text-red flex items-center gap-3">
           <span className="block w-8 h-[2px] bg-red" />
           Your Details
         </p>
 
-        {/* Name row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div>
             <label className={labelClass}>First Name</label>
-            <input
-              type="text"
-              name="firstName"
-              required
-              className={inputClass}
-            />
+            <input type="text" name="firstName" required className={inputClass} />
           </div>
           <div>
             <label className={labelClass}>Last Name</label>
-            <input
-              type="text"
-              name="lastName"
-              required
-              className={inputClass}
-            />
+            <input type="text" name="lastName" required className={inputClass} />
           </div>
         </div>
 
-        {/* Email & Phone row */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div>
             <label className={labelClass}>Email Address</label>
-            <input
-              type="email"
-              name="email"
-              required
-              className={inputClass}
-            />
+            <input type="email" name="email" required className={inputClass} />
           </div>
           <div>
             <label className={labelClass}>Phone</label>
@@ -162,7 +139,6 @@ export function DonateForm() {
           </div>
         </div>
 
-        {/* Submit */}
         <button
           type="submit"
           className="w-full bg-red text-white font-mono-dm text-[0.7rem] uppercase tracking-[0.15em] py-4 px-8 border-none cursor-pointer transition-colors duration-200 hover:bg-red-light mt-2"
@@ -170,7 +146,6 @@ export function DonateForm() {
           Proceed to Secure Payment
         </button>
 
-        {/* Note */}
         <p className="font-mono-dm text-[0.55rem] tracking-[0.1em] text-muted text-center">
           80G tax receipt issued for all donations. FCRA compliant.
         </p>

@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { FacebookIcon, InstagramIcon, YoutubeIcon } from "@/components/icons";
 
 const navigateLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About Us", href: "/about" },
   { label: "Our Work", href: "/work" },
   { label: "Stories", href: "/stories" },
   { label: "Contact", href: "/contact" },
@@ -15,18 +16,16 @@ const programLinks = [
   { label: "Women & Children", href: "/work#women-children" },
   { label: "Disaster Relief", href: "/work#disaster-relief" },
   { label: "Village Outreach", href: "/work#village-outreach" },
-  { label: "Leadership", href: "/work#leadership" },
 ];
 
 export function Footer() {
   return (
     <footer className="bg-navy-deep border-t-[3px] border-red">
-      {/* Main grid */}
       <div className="grid grid-cols-1 footer-desktop:grid-cols-[2fr_1fr_1fr_1fr] gap-10 footer-desktop:gap-16 px-8 py-12 footer-desktop:px-20 footer-desktop:py-16 max-w-[1400px] mx-auto">
         {/* Column 1: Brand */}
         <div className="flex flex-col gap-4">
           <div>
-            <h3 className="font-garamond text-[1.4rem] font-bold text-white m-0 leading-tight">
+            <h3 className="font-garamond text-[1.4rem] font-semibold text-white m-0 leading-tight">
               Aenon Ministries and Trust
             </h3>
             <p className="font-mono-dm text-[0.6rem] uppercase tracking-[0.12em] text-white/35 mt-1 mb-0">
@@ -34,10 +33,21 @@ export function Footer() {
             </p>
           </div>
           <p className="font-mulish text-[0.85rem] leading-relaxed text-white/50 max-w-[320px] m-0">
-            Serving communities with compassion and dignity from Hyderabad,
-            India since 1989. Bringing hope through education, healthcare, and
-            community development.
+            A Christian organization showing the love of Jesus to the world —
+            serving communities with compassion and dignity from Hyderabad,
+            India since 1989.
           </p>
+          <div className="flex items-center gap-4 text-white/45 mt-2">
+            <a href="#" aria-label="Facebook" className="hover:text-white transition-colors">
+              <FacebookIcon className="w-[16px] h-[16px]" />
+            </a>
+            <a href="#" aria-label="Instagram" className="hover:text-white transition-colors">
+              <InstagramIcon className="w-[16px] h-[16px]" />
+            </a>
+            <a href="#" aria-label="YouTube" className="hover:text-white transition-colors">
+              <YoutubeIcon className="w-[16px] h-[16px]" />
+            </a>
+          </div>
         </div>
 
         {/* Column 2: Navigate */}
